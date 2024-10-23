@@ -1,4 +1,4 @@
-https://www.youtube.com/watch?v=EUMpUUXKvP0
+https://www.youtube.com/watch?v=EUMpUUXKvP0 => Used to create the V1 of this project
 
 Virtual Environment
 python -m venv environment_name
@@ -6,6 +6,8 @@ venv\scripts\activate
 deactivate
 
 For VS code -> Ctrl+Shift+P(command pallete), start typing “Python: Select Interpreter” and select the venv interpreter
+
+django-admin startproject my_project .
 
 python manage.py runserver
 python manage.py startapp students
