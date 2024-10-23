@@ -1,0 +1,50 @@
+https://www.youtube.com/watch?v=EUMpUUXKvP0
+
+Virtual Environment
+python -m venv environment_name
+venv\scripts\activate
+deactivate
+
+For VS code -> Ctrl+Shift+P(command pallete), start typing “Python: Select Interpreter” and select the venv interpreter
+
+python manage.py runserver
+python manage.py startapp students
+Type ! in the html file to get boilerplate
+
+1. pehle view likha ki koi bhi req aaye render index.html. Views takes a web request and returns a web response. 
+2. then students mein urls.py banake jo view define kiya usko import kiya
+3. then js ke tarah we said ki default path '' mein views.index mein jo hai voh dikhao
+4. then main folder ke urls.py file mein jaake yeh new path include kardo
+5. path('',include('students.urls')) means ki jab default path aaye toh keep all the urls from students ready for render.
+6. Now we will create student class in student's models.py
+7. Now add these models to migrations using "python manage.py makemigrations". This will keep track of changes, then use command "python manage.py migrate" to apply them to the database.
+8. Now we will use bootswatch theme and add the .min.css file to the index.html of the students folder by saying "load static" and embed it to the link tag too.
+
+
+9. TEMPLATES in DJANGO -> 
+a django template is a text file while in the vast majority of cases this text file is an html file django templates can also be non html files such as csv templates or email templates to turn a plain text file into a django template we make use of tags variables and filters.
+We will use {% if students %} {% else %} {% endif %} to implement basic logic.
+
+10. Prettier extension is showing error with <p> tag, use different code formatter.
+
+11. To create a superuser for the admin page, use "python manage.py createsuperuser" command and fill the reqd details.
+UserName -> ayush
+Email -> ayushsenapati123@gmail.com
+Password -> Start@123
+
+
+INFO TEXT
+model view template is a design pattern used by django for developing a web application. This pattern is composed of a model that manages data and core business logic, a view that describes which data is sent to the user but not its presentation and a template which presents the data as html with optional css javascript and static assets.
+In our case we have the student model and the models.py file that manages the data the index view in the views.py file that describes which data is sent to the user and the template in the index.html file.
+
+EXAMPLE
+so let's take a look at the example with our django server up and running when you type in the browser a url referencing our localhost that is 127.0.0.1.8000 the first thing django does is find a url pattern in the urls.py that matches it the url pattern is linked to a single view contained in the views.py file a view typically combines the data from the model stored in the models.py file and styling from a template which can be any file ending with that html the view then returns an http response to the user.
+
+12. Django FORMS
+13. Django Template Inheritance
+Template inheritance allows you to build a base “skeleton” template that contains all the common elements of your site and defines blocks that child templates can override.
+
+14. Learn about CSRF Tokens and form.as_p
+
+15. At last we implemented edit and delete options 
+
